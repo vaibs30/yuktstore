@@ -15,15 +15,15 @@ class ItemList extends Component {
         super(props);
         this.state = {
             groceries: GROCERIES,
-            initialqty: '0'
+            qty: '0'
         };
     }
+    onChangeText(text) {
+        this.setState({
+          qty: text
+        })
+      }
 
-  /*  valueChange = () => {
-      this.setState({ 
-        initialqty : 
-       }); 
-      }*/
 
 
     static navigationOptions = {
@@ -46,11 +46,11 @@ class ItemList extends Component {
               <Right style={styles.container}>
               <Form>
               <TextInput  
-                    style={{height: 30, fontSize: 20, width: 40}}  
+                    style={{height: 30, fontSize: 20, width: 40, fontFamily: 'sans-serif'}}  
                     placeholder="0"  
-                    onChangeText={(initialqty) => this.setState({initialqty})} /> 
+                    onChangeText={(text) => this.onChangeText({text})} /> 
               </Form> 
-              <Button iconLeft style={styles.button}>
+              <Button iconLeft style={styles.button} onPress={() => changeQuantity(this)} >
                   <Icon name='cart' />
                   <Text>ADD TO CART</Text>
               </Button>
@@ -74,28 +74,7 @@ class ItemList extends Component {
 }
 
 const styles = StyleSheet.create({
-   /* top:{
-      backgroundColor: '#FFFFFF',
-      paddingTop: 20,
-      top: 0,
-      height: 64,
-      right: 0,
-      left: 0,
-      borderBottomWidth: 0.5,
-      borderBottomColor: '#828287',
-      position: 'relative',
-    },
-    text:{
-      marginTop:20,
-    },
-    rightButton: {
-      width: 100,
-      height: 37,
-      position: 'absolute',
-      bottom: 8,
-      right: 2,
-      padding: 8
-    },*/
+
     container: {
       flex: 1,
       flexDirection: 'row',
