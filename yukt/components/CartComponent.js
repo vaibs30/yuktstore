@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import { View, FlatList, StyleSheet, TextInput} from 'react-native';
-import { ListItem, Text, Left, Body, Right, List, Thumbnail, Form, Picker, Icon, Item,  Button, Input, Label } from 'native-base';
+import { ListItem, Text, Left, Body, Right, List, Thumbnail,Button } from 'native-base';
 import { GROCERIES } from '../shared/groceries';
 import { baseUrl } from '../shared/baseUrl';
 

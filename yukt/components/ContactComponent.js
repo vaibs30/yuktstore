@@ -10,8 +10,8 @@ import { Card } from 'react-native-elements';
 
      render() {
         return(
-            <View style={{ flex: 1, alignItems: 'stretch', justifyContent: 'center'}}>
-                <Card title='Contact Information'>
+            <View style={{ flex: 1, alignItems: 'stretch', justifyContent: 'center', backgroundColor : 'skyblue'}}>
+                <Card title='Contact Information' >
                     <Text style={{margin: 10}}>21/15, Tanjore Apartments</Text>
                     <Text style={{margin: 10}}>Brakathambal street</Text>
                     <Text style={{margin: 10}}>Chennai, Tamil Nadu</Text>

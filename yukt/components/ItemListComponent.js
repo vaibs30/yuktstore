@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
-import { View, FlatList, StyleSheet, TextInput} from 'react-native';
-import { ListItem, Text, Left, Body, Right, List, Thumbnail, Form, Picker, Icon, Item,  Button, Input, Label } from 'native-base';
+import { FlatList, StyleSheet, TextInput} from 'react-native';
+import { ListItem, Text, Left, Body, Right, List, Thumbnail, Form, Icon,Button } from 'native-base';
 import { GROCERIES } from '../shared/groceries';
 import { baseUrl } from '../shared/baseUrl';
 
@@ -23,6 +23,9 @@ class ItemList extends Component {
           qty: text
         })
       }
+    changeQuantity() {
+
+    }
 
 
 
@@ -46,8 +49,8 @@ class ItemList extends Component {
               <Right style={styles.container}>
               <Form>
               <TextInput  
-                    style={{height: 30, fontSize: 20, width: 40, fontFamily: 'sans-serif'}}  
-                    placeholder="0"  
+                    style={{height: 30, fontSize: 20, width: 50, fontFamily: 'regular', paddingBottom: 8}}  
+                    placeholder="Qty"  
                     onChangeText={(text) => this.onChangeText({text})} /> 
               </Form> 
               <Button iconLeft style={styles.button} onPress={() => changeQuantity(this)} >
